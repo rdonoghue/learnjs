@@ -12,4 +12,4 @@
 ### Observations
 
 - much easier to sync vscode when both computers are using the same account.
-- installed live server
+- installed live-server - just need to run 'live-server' in the directory and it opens that index.html, so that's SUPER convenient.

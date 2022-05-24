@@ -15,4 +15,4 @@ const markinfo = {
 // Oh! namingit as "this" means It's no on the object!
 // but I need to get the whole thing first.
 console.log(markinfo.bmi);
-console.log('Checkign that the live update is working');
+console.log('Checkign that the live update is working second try');
