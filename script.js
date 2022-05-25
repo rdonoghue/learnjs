@@ -1,18 +1,27 @@
 'use strict';
 
-const markinfo = {
-  height: 200,
-  mass: 100,
-  calcbmi: function () {
-    // I didn't need to do let/const?
-    this.bmi = this.height + this.mass;
-    return this.bmi;
-  },
-};
+function returnNumbers(numlist) {
+  let justnums = [];
+  for (const nonsense of numlist) {
+    if (typeof nonsense === 'number') {
+      // console.log(nonsense);
+      justnums.push(nonsense);
+    }
+  }
+  justnums = justnums.sort();
+  return justnums;
+}
 
-//console.log(markinfo.calcbmi())
+let value_list = [10, 45, 'error', 6, 999, -4, 17, 8, '', false];
+// Ok, let's get the highest, lowest and average of all the numbers, and just numbers
 
-// Oh! namingit as "this" means It's no on the object!
-// but I need to get the whole thing first.
-console.log(markinfo.bmi);
-console.log('Checkign that the live update is working second try');
+console.log(value_list);
+
+console.log('after filtering for numbers');
+
+const justnumbers = returnNumbers(value_list);
+
+console.log(justnumbers);
+
+console.log('Lowest Value: ' + justnumbers[0]);
+console.log('Highest Value: ' + justnumbers[justnumbers.length - 1]);
