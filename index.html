@@ -4,25 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>JavaScript Fundamentals – Noodling</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" type="text/css" />
+    <title>Guess My Number!</title>
   </head>
   <body>
-    <h1>JavaScript Fundamentals – Rob's Class Notes Version</h1>
-    <p>What exactly is going on here?</p>
-    <p>Why is this going horizontal?</p>
+    <header>
+      <h1>Guess My Number!</h1>
+      <p class="between">(Between 1 and 20)</p>
+      <button class="btn again">Again!</button>
+      <div class="number">?</div>
+    </header>
+    <main>
+      <section class="left">
+        <input type="number" class="guess" />
+        <button class="btn check">Check!</button>
+      </section>
+      <section class="right">
+        <p class="message">Start guessing...</p>
+        <p class="label-score">💯 Score: <span class="score">20</span></p>
+        <p class="label-highscore">
+          🥇 Highscore: <span class="highscore">0</span>
+        </p>
+      </section>
+    </main>
     <script src="script.js"></script>
-    <script src="everything.js"></script>
-    <br />
-    <div style="border: 1px solid black">
-      <div class="wrapper">
-        <!-- // first row -->
-        <div>70%</div>
-        <div>30%</div>
-        <!-- // second row... you don't have to specify rows like bootstrap -->
-        <div>70%</div>
-        <div style="background-color: azure">30% again</div>
-      </div>
-    </div>
   </body>
 </html>
