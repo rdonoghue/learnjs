@@ -19,3 +19,4 @@
   display: flex;
 
 - Ok, important lesson on for loops, in vs of. **in** will do a count through an array, but **of** will go through the contents of an array (maybe a dict too? Something to test)
+- Looking to understand the reduce() function on arrays
