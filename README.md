@@ -25,4 +25,6 @@
   could be anything - x,y or whatever
   example I saw did **array.reduce((a,b) => a+b,0)** and I'm not 100% sure what the **,0** is for
 - Ok, this now has me looking at **array.map()**
-- Looks like it does something to each value of an array, so for 1, 2, 3, \*_array.map(n => 2 _ n) would produce 2,4,6. That's the theory, time to go test.
+- Looks like it does something to each value of an array, so for 1, 2, 3, array.map(n => 2 \* n) would produce 2,4,6. That's the theory, time to go test.
+  -Regular reminder to self that capitalization matters. Just spent 5 minutes tryign to figure otu why I couldn't see .textContent of a DOM element before realizing I'd typed 'textcontent'
+  Remember: Class -> ., id -> #

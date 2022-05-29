@@ -109,8 +109,9 @@ h1 {
   background-color: #ccc;
 }
 
-.message {
-  margin-bottom: 8rem;
+.message,
+.guesshistory {
+  margin-bottom: 4rem;
   height: 3rem;
 }
 
