@@ -43,7 +43,7 @@ function processGuess(guessvalue) {
     document.querySelector('.recheck').style.display = 'block';
     document.querySelector('.success').style.display = 'block';
     document.querySelector('.number').textContent = '!';
-    document.querySelector('.number').style.background = 'green';
+    document.querySelector('.number').style.backgroundColor = 'green';
     document.querySelector('.number').style.color = 'white';
 
     // update High Score
