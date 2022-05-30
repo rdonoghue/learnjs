@@ -83,3 +83,11 @@ p {
   backdrop-filter: blur(3px);
   z-index: 5;
 }
+
+.btnHeader {
+  border: 2px solid blue;
+}
+
+.bottomPart {
+  border: 2px solid blue;
+}

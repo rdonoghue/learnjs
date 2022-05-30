@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+    sans-serif;
+  background: linear-gradient(to top left, #9aa2ea, #7179d0);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topstrip {
+  width: 100%;
+  border: 1px solid black;
+  height: 250px;
+}
+
+.navigation {
+}
+
+.main {
+}

@@ -25,3 +25,10 @@ overlay.addEventListener('click', function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
 });
+
+document.querySelector('body').addEventListener('keypress', function (event) {
+  if (event.code === 'Escape') {
+    modal.classList.add('hidden');
+    overlay.classList.add('hidden');
+  }
+});
