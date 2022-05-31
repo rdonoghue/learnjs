@@ -16,11 +16,34 @@ body {
 .topstrip {
   width: 100%;
   border: 1px solid black;
-  height: 250px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
 }
 
+.middle {
+  width: 100%;
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: row;
+}
 .navigation {
+  width: 25%;
+  border: 3px solid red;
+  display: flex;
+  flex-direction: row;
 }
 
 .main {
+  width: 65%;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer {
+  width: 100%;
+  border: 3px solid cyan;
+  display: flex;
+  flex-direction: row;
 }
