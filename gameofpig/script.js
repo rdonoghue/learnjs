@@ -42,6 +42,10 @@ let score = [0, 0];
 let currentTally = 0;
 let gameOver = false;
 
+for (let foo = 0; foo < 20; foo++) {
+  console.log('num ' + foo);
+}
+
 // Functions
 
 function switchPlayer() {
