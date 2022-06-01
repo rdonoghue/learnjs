@@ -1,0 +1,18 @@
+Test out Taskpaper:
+- does this work?
+    - Does it intent?
+    - archive this
+    - Mark this done @done
+
+- 
+Hotkeys:
+Enter add a new todo item at same indentation (or split it at the cursor)
+Tab increase indentation (from anywhere in the line)
+Ctrl+d/Cmd+d toggle item done
+Ctrl+Shift+a/Cmd+Shift+a move done items into Archive project (repects nested tasks)
+
+Requirements:
+create a file named todo or use the extensions .todo,.todo, .todos or .taskpaper
+
+Archive:
+- Archive this too? @done
