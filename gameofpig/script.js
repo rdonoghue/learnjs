@@ -4,6 +4,10 @@ const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 const btnNewGame = document.querySelector('.btn--new');
 const diceImage = document.querySelector('.dice');
+const dispBusted = [
+  document.getElementById('busted--0'),
+  document.getElementById('busted--1'),
+];
 const dispTally = [
   document.getElementById('score--0'),
   document.getElementById('score--1'),
@@ -15,6 +19,11 @@ const dispScore = [
 const dispActive = [
   document.getElementById('name--0'),
   document.getElementById('name--1'),
+];
+
+const activePlayer = [
+  document.querySelector('.player--0'),
+  document.querySelector('.player--1'),
 ];
 const tally1 = document.getElementById('score--0');
 const tally2 = document.getElementById('score--1');
@@ -33,15 +42,15 @@ let score = [0, 0];
 let currentTally = 0;
 let gameOver = false;
 
-console.log('Inactive player: ' + inActivePlayer);
-console.log(1 % 2);
-
 // Functions
 
 function switchPlayer() {
-  console.log('Was Player: ' + (playersTurn + 1));
+  currentTally = 0;
+  updateScore();
   playersTurn = (playersTurn + 1) % 2;
   inActivePlayer = (playersTurn + 1) % 2;
+  activePlayer[inActivePlayer].classList.remove('player--active');
+  activePlayer[playersTurn].classList.add('player--active');
   dispActive[inActivePlayer].classList.remove('active');
   dispActive[playersTurn].classList.add('active');
 }
@@ -57,6 +66,8 @@ function resetGame() {
   currentTally = 0;
   dispActive[inActivePlayer].classList.remove('active');
   dispActive[playersTurn].classList.add('active');
+  activePlayer[inActivePlayer].classList.remove('player--active');
+  activePlayer[playersTurn].classList.add('player--active');
   gameOver = false;
 }
 function hold() {
@@ -66,7 +77,6 @@ function hold() {
     if (score[playersTurn] >= 100) {
       victory(playersTurn);
     } else {
-      currentTally = 0;
       switchPlayer();
     }
   }
@@ -90,7 +100,7 @@ function takeTurn() {
     let latestRoll = rollTheBones();
     const player = playersTurn;
     if (latestRoll === 1) {
-      endTurn(player);
+      piggy(player);
     } else {
       updateTally(latestRoll);
     }
@@ -100,38 +110,38 @@ function takeTurn() {
 function updateTally(newvalue) {
   currentTally += newvalue;
   dispTally[playersTurn].textContent = currentTally;
-  console.log(
-    'Player ' +
-      playersTurn +
-      ' rolls a ' +
-      newvalue +
-      ' for a total score of ' +
-      currentTally
-  );
 }
-function endTurn(player) {
-  console.log('whups');
+function piggy(player) {
+  dispBusted[player].classList.remove('hidden');
+  setTimeout(function () {
+    dispBusted[player].classList.add('hidden');
+  }, 1000);
+  currentTally = 0;
+  switchPlayer();
 }
 
 function rollTheBones() {
   let result = Math.trunc(Math.random() * 6 + 1);
   //  document.querySelector('.dice').src = dieSrc;
-  console.log('dice-' + result + '.png');
   diceImage.src = 'dice-' + result + '.png';
   return result;
 }
 
 //Listeners
 // Hit space to roll. just for convenience
-document.addEventListener('keydown', function (e) {
-  console.log(e.key);
-  if (e.code === 'Space') {
-    console.log(rollTheBones());
-    console.log('Active Player: ' + playersTurn);
-    console.log('Inactive Player: ' + inActivePlayer);
-  }
-});
+
+// document.addEventListener('keydown', function (e) {
+//   if (e.code === 'Space') {
+//     console.log(rollTheBones());
+//     console.log('Active Player: ' + playersTurn);
+//     console.log('Inactive Player: ' + inActivePlayer);
+//   }
+// });
 
 btnRoll.addEventListener('click', takeTurn);
 btnHold.addEventListener('click', hold);
 btnNewGame.addEventListener('click', resetGame);
+
+setTimeout(function () {
+  dispTally[playersTurn].textContent = 0;
+}, 2000);
