@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+body {
+  background: green;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sheepbox {
+  /* padding-top: 45%;
+  padding-left: 45%; */
+  top: 5px;
+  left: 5px;
+  position: relative;
+}
+
+.sheep-pen {
+  top: 20px;
+  left: 5px;
+  height: 500px;
+  width: 500px;
+  border: 2px solid black;
+  position: absolute;
+}
+
+.speedpanel {
+  top: 20px;
+  left: 515px;
+  height: 500px;
+  width: 150px;
+  border: 2px solid black;
+  position: absolute;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.controls {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.5rem 0.5rem;
+  margin: 0.5rem 0.5rem;
+  border: none;
+  color: #444;
+  border-radius: 1rem;
+  cursor: pointer;
+  width: 125px;
+}
+
+.weirdshape {
+  width: 120px;
+  height: 120px;
+  border: 0px solid #71acc8;
+  background-color: blue;
+  border-radius: 0% 100% 0% 100% / 67% 49% 51% 33%;
+  position: absolute;
+  top: 46px;
+  left: 160px;
+}
+
+.unselected {
+  background-color: #fff;
+}
+
+.selected {
+  background-color: lightgreen;
+}
