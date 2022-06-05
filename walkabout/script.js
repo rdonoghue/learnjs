@@ -45,6 +45,16 @@ function smoothMove() {
   }
 }
 
+function moveUP() {
+  if (pos < 0) {
+    clearInterval(id);
+  } else {
+    pos += 1;
+    theSheep.style.top = pos + 'px';
+    theSheep.style.left = pos + 'px';
+  }
+}
+
 // let increment = 0;
 // let test2 = setInterval(doSomething, 1000);
 
@@ -64,12 +74,17 @@ goButton.addEventListener('click', function () {
   id = setInterval(smoothMove, 10);
 });
 
-document.addEventListener('keydown', function (e) {
+document.addEventListener('keypress', function (e) {
   console.log(e.code);
   if (e.code === 'ArrowUp') {
-    if (yAxis > 0) {
-      yAxis += -speedArray[speed];
-    }
+    console.log('Start moving Up');
+  }
+});
+
+document.addEventListener('keyup', function (e) {
+  console.log(e.code);
+  if (e.code === 'ArrowUp') {
+    console.log('Stop moving up');
   }
 });
 
