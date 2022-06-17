@@ -2,6 +2,7 @@
 
 ## Notes as I go
 - Adding a note to see if it creates a conflict
+- Added this bullet on the main branch
 
 ### Keywords from Todo Highlighter
 
