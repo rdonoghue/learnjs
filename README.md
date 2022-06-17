@@ -4,6 +4,12 @@
 - Adding a note to see if it creates a conflict
 - Added this bullet on the main branch
 
+- Adding another bullet as I branch
+- In theory, I am now working on a branch
+- Let's test that
+- OK, I can now see actual branching!  Time to merge - ideally we'll keep all bullets
+- except this one
+ 
 ### Keywords from Todo Highlighter
 
 - TODO:
