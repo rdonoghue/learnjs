@@ -3,7 +3,8 @@
 ## Notes as I go
 - Adding a note to see if it creates a conflict
 - Adding another bullet as I branch
-
+- In theory, I am now working on a branch
+- Let's test that
 ### Keywords from Todo Highlighter
 
 - TODO:
