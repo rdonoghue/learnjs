@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
 body {
-  background: green;
+  background-color: green;
   height: 100vh;
   overflow: hidden;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  position: relative;
 }
 
 .sheepbox {
@@ -12,14 +18,16 @@ body {
   top: 5px;
   left: 5px;
   position: relative;
+  border: 2px solid yellow;
+  margin: 0 auto;
 }
 
 .sheep-pen {
   top: 20px;
   left: 5px;
   height: 500px;
-  width: 500px;
-  border: 2px solid black;
+  width: 800px;
+  border: 2px solid aqua;
   position: absolute;
 }
 
