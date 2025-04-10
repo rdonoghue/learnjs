@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+* {
+  font-family: sans-serif;
+}
+
+.planContainer {
+  display: block;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  width: 1095px;
+  min-height: 600px;
+  border-top: 2px solid black;
+}
+.vertBarHolder {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.vertBar {
+  /* background-color: rgba(0, 255, 255, 30%); */
+  border-right: 1px solid #2f2f2f;
+  flex-grow: 1;
+  min-height: 600px;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.vertBar:nth-last-child {
+  border: 0;
+}
+
+.eventContainer {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.eventBucket {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-left: 240px;
+  width: max-content;
+}
+
+.bucketRow {
+  height: 1.5rem;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.bucketItem {
+  height: 1.5rem;
+  vertical-align: middle;
+  padding: 2px 5px;
+  border-radius: 5px;
+  background-color: #ffa07a;
+}
+
+.eventBucket {
+  border-top: 4px solid lightsalmon;
+  border-left: 1px solid lightsalmon;
+  border-right: 1px solid lightsalmon;
+  background-color: rgba(255, 160, 122, 30%);
+}
+
+.eventBucket:nth-child(1) .bucketRow .bucketItem {
+  background-color: lightsalmon;
+}
+
+.eventBucket .bucketRow:nth-child(1) .bucketItem {
+  margin-left: 0px;
+  width: 100px;
+}
+
+.eventBucket .bucketRow:nth-child(2) .bucketItem {
+  margin-left: 95px;
+  width: 150px;
+}
+
+.eventBucket .bucketRow:nth-child(3) .bucketItem {
+  margin-left: 200px;
+  width: 150px;
+}
+
+.eventRow {
+  height: 1.5rem;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.eventItem {
+  height: 1.5rem;
+  vertical-align: middle;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+.eventRow:nth-child(5n + 1) .eventItem {
+  background-color: lightsalmon;
+}
+.eventRow:nth-child(5n + 2) .eventItem {
+  background-color: lightgreen;
+}
+.eventRow:nth-child(5n + 3) .eventItem {
+  background-color: lightgrey;
+}
+
+.eventRow:nth-child(5n + 4) .eventItem {
+  background-color: lightskyblue;
+}
+
+.eventRow:nth-child(5n) .eventItem {
+  background-color: lightgoldenrodyellow;
+}
+
+.eventRow:nth-child(1) .eventItem {
+  margin-left: 200px;
+  width: 700px;
+}
+.eventRow:nth-child(3) .eventItem {
+  margin-left: 150px;
+  width: 610px;
+}
+
+.bottomBar {
+  background-color: pink;
+  height: 4px;
+  padding: 0;
+  position: relative;
+  top: 598px;
+  left: 0px;
+  width: 1200px;
+}
+.bottomBall {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background-color: black;
+}
