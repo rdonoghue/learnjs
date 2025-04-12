@@ -1,0 +1,82 @@
+body {
+  font-family: Optimist, 'Avenir Next', sans-serif;
+}
+
+.myBox {
+  display: flex;
+  position: absolute;
+  top: 5%;
+  left: 12rem;
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  /* gap: 5px; */
+  flex-direction: column;
+}
+.eventRow {
+  width: 100%;
+  background-color: rgba(0, 99, 0, 20%);
+  min-height: 1rem;
+  display: block;
+}
+
+.metaEvent {
+  position: relative;
+  background-color: rgba(0, 99, 0, 20%);
+
+  left: 200px;
+  /* width: fit-content; */
+  width: 250px;
+  /* width: 600px; */
+}
+.metaEvent p {
+  font-weight: 600;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 99, 0, 100%);
+  color: whitesmoke;
+}
+
+.miniTimeline {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+.miniEvent {
+  position: relative;
+  border-bottom: 2px solid rgba(0, 99, 0, 100%);
+  font-size: 9pt;
+  text-wrap: nowrap;
+}
+
+.lineitem {
+  height: 2rem;
+  min-width: 15rem;
+  background-color: lightblue;
+  border: 1px solid darkblue;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.bgDot {
+  background-image: radial-gradient(blue 5%, transparent 5%);
+  background-position: center left;
+}
+
+.square {
+  height: 10rem;
+  width: 10rem;
+  border: 1px solid black;
+}
