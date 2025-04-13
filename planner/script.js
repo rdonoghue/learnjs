@@ -4,7 +4,37 @@ var eventList = [
   ['From Script 1', 90, 120, 0, 20, 'Hello'],
   ['From Script 2', 60, 220, 1, 50, 'Hello'],
   ['From Script 3', 0, 300, 2, 10, 'Hello'],
-  ['From Script 4', 14, 65, 3, 10, 'Another note'],
+  [
+    'From Script 4',
+    14,
+    180,
+    3,
+    10,
+    ' <div class="miniTimeline"><div class="miniEvent" style="left: 0px; width: 100px">Event 1</div><div class="miniEvent" style="left: 50px; width: 200px">Event 2</div></div>',
+  ],
+  [
+    'a Meta Event',
+    0,
+    300,
+    2,
+    10,
+    [
+      ['Blurb', 30, 50],
+      ['Blurb2', 40, 90],
+    ],
+  ],
+  [
+    'a Different Event',
+    100,
+    240,
+    2,
+    30,
+    [
+      ['Blurb', 30, 50],
+      ['Blurb2', 40, 200],
+      ['blurb3', 80, 80],
+    ],
+  ],
 ];
 
 var planContainer = document.querySelector('.planContainer');
@@ -67,6 +97,10 @@ const lineItem = ['From Script 2', '3/1/25', '8/17/25', 0, 20, 'Note'];
 addToday();
 
 monthPage();
+// makeMetaEvent('a Meta Event', 0, 300, 4, 10, [
+//   ['Blurb', 30, 50],
+//   ['Blurb2', 40, 90],
+// ]);
 
 // yearPage(4);
 
@@ -145,6 +179,8 @@ function yearPage(years) {
 }
 
 function makeEvent(name, left, width, color, percent = '', notes = '') {
+  console.log(notes + ': ' + typeof notes);
+
   const newEvent = document.createElement('div');
   const newEventItem = document.createElement('div');
   const newGraph = document.createElement('div');
@@ -165,8 +201,27 @@ function makeEvent(name, left, width, color, percent = '', notes = '') {
 
   newGraph.className = 'graph';
 
-  newNotes.className = 'notes';
-  newNotes.innerText = notes;
+  if (typeof notes === 'object') {
+    console.log('SOMETHING SHOULD HAPPEN HERE');
+    console.log(notes.length);
+    console.log(notes);
+    newNotes.className = 'miniTimeline';
+    var i = 0;
+    while (i < notes.length) {
+      const miniEvent = document.createElement('div');
+      miniEvent.className = 'miniEvent';
+      miniEvent.style.left = notes[i][1] * dayMult + 'px';
+      miniEvent.style.width = notes[i][2] * dayMult + 'px';
+      miniEvent.style.borderColor = themeBorder[color];
+      miniEvent.innerHTML = notes[i][0];
+      newNotes.appendChild(miniEvent);
+      i++;
+      console.log(miniEvent);
+    }
+  } else {
+    newNotes.className = 'notes';
+    newNotes.innerText = notes;
+  }
 
   eventContainer.appendChild(newEvent);
   newEvent.appendChild(newEventItem);

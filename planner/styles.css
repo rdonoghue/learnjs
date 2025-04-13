@@ -114,3 +114,17 @@
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+.miniTimeline {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+}
+.miniEvent {
+  position: relative;
+  border-bottom: 2px solid rgba(0, 99, 0, 100%);
+  font-size: 9pt;
+  text-wrap: nowrap;
+}
