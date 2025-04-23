@@ -13,6 +13,7 @@
   min-height: 600px;
   border: 2px solid black;
   overflow: hidden;
+  border-radius: 5px;
 }
 
 .todayLine {
@@ -29,7 +30,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  border: 2px solid pink;
 }
 .vertBar {
   /* background-color: rgba(0, 255, 255, 30%); */
